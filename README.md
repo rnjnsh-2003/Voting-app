@@ -10,24 +10,14 @@ A decentralized voting system built with Solidity and Foundry, allowing users to
 
 📌 Usage
 1️⃣ Add a Candidate
-
-solidity
-Copy
-Edit
 voting.addCandidate("Alice");
+
 2️⃣ Vote for a Candidate
-
-solidity
-Copy
-Edit
 voting.vote(0); // Voting for candidate at index 0
-3️⃣ Check Voting Results
 
-solidity
-Copy
-Edit
+3️⃣ Check Voting Results
 (string memory winner, uint256 votes) = voting.getWinner();
-🤝 Contributing
+
 Feel free to contribute! Open an issue or submit a pull request. 🚀
 
 📜 License
