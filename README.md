@@ -1,66 +1,35 @@
-## Foundry
+# 🗳️ Voting App
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+A decentralized voting system built with Solidity and Foundry, allowing users to vote securely on the blockchain. 
 
-Foundry consists of:
+## 🚀 Features
+- 🏛️ **Add Candidates** – Only the contract owner can add candidates.
+- ✅ **Voting System** – Users can cast their votes only once.
+- 📊 **Results Calculation** – Automatically determines the winner based on votes.
+- 🔒 **Secure & Transparent** – Powered by Ethereum smart contracts.
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+📌 Usage
+1️⃣ Add a Candidate
 
-## Documentation
+solidity
+Copy
+Edit
+voting.addCandidate("Alice");
+2️⃣ Vote for a Candidate
 
-https://book.getfoundry.sh/
+solidity
+Copy
+Edit
+voting.vote(0); // Voting for candidate at index 0
+3️⃣ Check Voting Results
 
-## Usage
+solidity
+Copy
+Edit
+(string memory winner, uint256 votes) = voting.getWinner();
+🤝 Contributing
+Feel free to contribute! Open an issue or submit a pull request. 🚀
 
-### Build
+📜 License
+This project is licensed under the MIT License.
 
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
